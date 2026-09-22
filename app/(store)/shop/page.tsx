@@ -1,0 +1,2 @@
+import { ShopCatalog } from '@/components/products/ShopCatalog'; import { getActiveProducts } from '@/lib/catalog';
+export default async function Shop(){const products=await getActiveProducts();return <div className="shell section"><p className="eyebrow">The complete edit</p><h1 className="mt-2 font-display text-5xl">Shop all hair</h1><p className="mt-4 max-w-xl text-stone-600">Explore our current collection by texture, length and style.</p><ShopCatalog products={products}/></div>}

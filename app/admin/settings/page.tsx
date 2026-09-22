@@ -1,0 +1,1 @@
+export default function Settings(){return <div className="shell section"><p className="eyebrow">Store settings</p><h1 className="mt-2 font-display text-4xl">Settings</h1><p className="mt-4 text-stone-600">Configure store details and integrations once credentials are available.</p></div>}

@@ -1,0 +1,1 @@
+export default async function EditProduct({params}:{params:Promise<{id:string}>}){const {id}=await params;return <div className="shell section"><p className="eyebrow">Catalogue</p><h1 className="mt-2 font-display text-4xl">Edit product</h1><p className="mt-4 text-stone-600">Product ID: {id}. Connect the protected product form to Supabase to edit this item.</p></div>}

@@ -1,0 +1,7 @@
+export type Category={id:string;name:string;slug:string;description?:string;image?:string};
+export type ProductVariant={id:string;productId:string;length?:string;color?:string;options?:Record<string,string>;price:number;compareAtPrice?:number;stockQuantity:number;sku:string;isActive?:boolean};
+export type Product={id:string;name:string;slug:string;description:string;price:number;compareAtPrice?:number;category:Category;brand?:string;hairType?:string;length?:string;color?:string;stockQuantity:number;sku:string;featured?:boolean;isNew?:boolean;images:{url:string;alt:string}[];variants?:ProductVariant[]};
+export type CartItem={lineId:string;product:Product;variant?:ProductVariant;quantity:number;instructions?:string};
+export type ProductSelection={variant?:ProductVariant;length?:string;color?:string;options?:Record<string,string>;instructions?:string};
+export function getProductVariant(product:Product,selection:ProductSelection={}):ProductVariant { if(selection.variant)return selection.variant; return {id:`${product.id}-default`,productId:product.id,length:selection.length??product.length,color:selection.color??product.color,options:selection.options,price:product.price,compareAtPrice:product.compareAtPrice,stockQuantity:product.stockQuantity,sku:product.sku,isActive:true}; }
+export function getCartLineId(product:Product,selection:ProductSelection={}):string { const variant=getProductVariant(product,selection); return [product.id,variant.id,variant.length??'',variant.color??'',JSON.stringify(variant.options??{}),selection.instructions??''].join('|'); }

@@ -1,0 +1,1 @@
+export default async function OrderDetail({params}:{params:Promise<{id:string}>}){const {id}=await params;return <div className="shell section"><p className="eyebrow">Fulfilment</p><h1 className="mt-2 font-display text-4xl">Order details</h1><p className="mt-4 text-stone-600">Order ID: {id}. Connect a protected server query to load order data.</p></div>}

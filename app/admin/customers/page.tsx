@@ -1,0 +1,1 @@
+export default function Customers(){return <div className="shell section"><p className="eyebrow">Customers</p><h1 className="mt-2 font-display text-4xl">Customer directory</h1><p className="mt-4 text-stone-600">Customer information is managed securely through the connected database.</p></div>}

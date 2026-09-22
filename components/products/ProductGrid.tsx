@@ -1,0 +1,2 @@
+import { Product } from '@/types/product'; import { ProductCard } from './ProductCard';
+export function ProductGrid({products}:{products:Product[]}){if(!products.length)return <div className="rounded-2xl border border-dashed border-stone-300 p-12 text-center"><h2 className="font-display text-2xl">Nothing here just yet</h2><p className="mt-2 text-stone-600">Try another category or clear your filters.</p></div>;return <div className="grid grid-cols-2 gap-x-4 gap-y-9 md:grid-cols-3 lg:grid-cols-4">{products.map(p=><ProductCard key={p.id} product={p}/>)}</div>}

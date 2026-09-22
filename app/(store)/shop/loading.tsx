@@ -1,0 +1,1 @@
+export default function Loading(){return <div className="shell section"><p className="eyebrow">The complete edit</p><div className="mt-3 h-14 w-64 animate-pulse rounded bg-stone-200"/><div className="mt-10 grid grid-cols-2 gap-4 md:grid-cols-4">{Array.from({length:4}).map((_,i)=><div className="aspect-[4/5] animate-pulse rounded-xl bg-stone-200" key={i}/>)}</div></div>}

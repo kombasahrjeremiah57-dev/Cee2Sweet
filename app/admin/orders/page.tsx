@@ -1,0 +1,1 @@
+export default function Orders(){return <div className="shell section"><p className="eyebrow">Fulfilment</p><h1 className="mt-2 font-display text-4xl">Orders</h1><p className="mt-4 text-stone-600">Orders will appear here once Supabase is connected.</p></div>}
